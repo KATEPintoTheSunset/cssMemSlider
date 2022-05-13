@@ -2,55 +2,148 @@ body {
     background-color: #25282a;
 }
 
-.slider {
+.container {
     display: flex;
     align-items: center;
+}
+
+.slider {
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 100px 0;
+    margin: 10em 0;
+}
+
+.imgbox {
+    width: 33vw;
+    height: 50vh;
+    border-radius: 1em;
+    box-shadow: 0 0 1em black;
+    overflow: hidden;
 }
 
 .img {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-direction: row;
-    overflow: hidden;
-    width: 600px;
-    height: 500px;
-    border-radius: 15px;
 }
 
 img {
-    width: 600px;
-    height: 500px;
-    border-radius: 15px;
+    width: 33vw;
+    height: 50vh;
+    border-radius: 1em;
 }
 
 .staff {
-    width: 600px;
-    display: flex;
-    align-items: center;
+    width: 33vw;
+    height: 7vh;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    margin: 1em 0;
+    overflow: hidden;
+}
+
+.btn {
+    justify-content: flex-end;
+    margin: 1em 0;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 p {
     color:aliceblue;
-    font-size: 15px;
+    width: 15em;
+    height: 10em;
+    font-size: 1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-button {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    border: 1px solid cornflowerblue;
-    background-color: cornflowerblue;
+input {
+    visibility: hidden;
+    position: absolute;
+    height: 1.5em;
+    width: 1.5em;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: aliceblue;
-    border: 1px solid aliceblue;
+label{
+    height: 1em;
+    width: 1em;
+    margin: auto 0.3em;
+    content: " ";
+    display: inline-block;
+    cursor: pointer;
+    background-color: cornflowerblue;
+    border: 0.1em solid cornflowerblue;
+    border-radius: 50%;
 }
+
+#slide1:checked ~ .staff .btn label:nth-of-type(1),
+#slide2:checked ~ .staff .btn label:nth-of-type(2),
+#slide3:checked ~ .staff .btn label:nth-of-type(3),
+#slide4:checked ~ .staff .btn label:nth-of-type(4),
+#slide5:checked ~ .staff .btn label:nth-of-type(5) {
+    border: 0.1em solid cornflowerblue;
+    background: none;
+    box-shadow: 0 0 1em black;
+    transition: 0.25s;
+}
+
+label:hover {
+    background-color: aliceblue;
+    border: 0.1em solid aliceblue;
+    box-shadow: 0 0 1em black;
+    transition: 0.25s;
+}
+
+#slide1:checked ~ .imgbox .img {
+    transition: 0.5s;
+    margin-left: 0vw;
+}
+
+#slide1:checked ~ .staff p:nth-of-type(1) {
+    transition: 0.5s;
+    margin-top: 57em;
+}
+
+#slide2:checked ~ .imgbox .img {
+    transition: 0.5s;
+    margin-left: -33vw;
+}
+
+#slide2:checked ~ .staff p:nth-of-type(1) {
+    transition: 0.5s;
+    margin-top: 31em;
+}
+
+#slide3:checked ~ .imgbox .img {
+    transition: 0.5s;
+    margin-left: -66vw;
+}
+
+#slide3:checked ~ .staff p:nth-of-type(1) {
+    transition: 0.5s;
+    margin-top: 9em;
+}
+
+#slide4:checked ~ .imgbox .img {
+    transition: 0.5s;
+    margin-left: -99vw;
+}
+
+#slide4:checked ~ .staff p:nth-of-type(1) {
+    transition: 0.5s;
+    margin-top: -14em;
+}
+
+#slide5:checked ~ .imgbox .img {
+    transition: 0.5s;
+    margin-left: -132vw;
+}
+
+#slide5:checked ~ .staff p:nth-of-type(1) {
+    transition: 0.5s;
+    margin-top: -39em;
+}
+
+
