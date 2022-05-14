@@ -67,30 +67,37 @@ input {
     cursor: pointer;
 }
 
-label{
+.area {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    padding: 0.6em;
+    cursor: pointer;
+
+}
+
+.button{
     height: 1em;
     width: 1em;
-    margin: auto 0.3em;
-    content: " ";
     display: inline-block;
-    cursor: pointer;
     background-color: cornflowerblue;
     border: 0.1em solid cornflowerblue;
+    cursor: pointer;
     border-radius: 50%;
 }
 
-#slide1:checked ~ .staff .btn label:nth-of-type(1),
-#slide2:checked ~ .staff .btn label:nth-of-type(2),
-#slide3:checked ~ .staff .btn label:nth-of-type(3),
-#slide4:checked ~ .staff .btn label:nth-of-type(4),
-#slide5:checked ~ .staff .btn label:nth-of-type(5) {
+#slide1:checked ~ .staff .btn .area:nth-of-type(1) .button,
+#slide2:checked ~ .staff .btn .area:nth-of-type(2) .button,
+#slide3:checked ~ .staff .btn .area:nth-of-type(3) .button,
+#slide4:checked ~ .staff .btn .area:nth-of-type(4) .button,
+#slide5:checked ~ .staff .btn .area:nth-of-type(5) .button {
     border: 0.1em solid cornflowerblue;
     background: none;
     box-shadow: 0 0 1em black;
     transition: 0.25s;
 }
 
-label:hover {
+.area:hover .button, .button:hover{
     background-color: aliceblue;
     border: 0.1em solid aliceblue;
     box-shadow: 0 0 1em black;
@@ -163,6 +170,10 @@ label:hover {
         height: 5.1em;
         flex-direction: column;
         margin: 0;
+    }
+
+    .btn {
+        margin: 0.5em 0;
     }
     
     .text {
