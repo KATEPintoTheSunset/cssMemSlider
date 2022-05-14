@@ -14,8 +14,8 @@ body {
 }
 
 .imgbox {
-    width: 33vw;
-    height: 50vh;
+    width: 35em;
+    height: 35em;
     border-radius: 1em;
     box-shadow: 0 0 1em black;
     overflow: hidden;
@@ -26,17 +26,18 @@ body {
 }
 
 img {
-    width: 33vw;
-    height: 50vh;
+    width: 35em;
+    height: 35em;
     border-radius: 1em;
 }
 
 .staff {
-    width: 33vw;
-    height: 7vh;
+    width: 35em;
+    height: 3em;
     justify-content: space-between;
     margin: 1em 0;
     overflow: hidden;
+    flex-direction: row-reverse;
 }
 
 .btn {
@@ -98,27 +99,27 @@ label:hover {
 
 #slide1:checked ~ .imgbox .img {
     transition: 0.5s;
-    margin-left: 0vw;
+    margin-left: 0em;
 }
 
 #slide1:checked ~ .staff p:nth-of-type(1) {
     transition: 0.5s;
-    margin-top: 57em;
+    margin-top: 58em;
 }
 
 #slide2:checked ~ .imgbox .img {
     transition: 0.5s;
-    margin-left: -33vw;
+    margin-left: -35em;
 }
 
 #slide2:checked ~ .staff p:nth-of-type(1) {
     transition: 0.5s;
-    margin-top: 31em;
+    margin-top: 32em;
 }
 
 #slide3:checked ~ .imgbox .img {
     transition: 0.5s;
-    margin-left: -66vw;
+    margin-left: -70em;
 }
 
 #slide3:checked ~ .staff p:nth-of-type(1) {
@@ -128,7 +129,7 @@ label:hover {
 
 #slide4:checked ~ .imgbox .img {
     transition: 0.5s;
-    margin-left: -99vw;
+    margin-left: -105em;
 }
 
 #slide4:checked ~ .staff p:nth-of-type(1) {
@@ -138,12 +139,76 @@ label:hover {
 
 #slide5:checked ~ .imgbox .img {
     transition: 0.5s;
-    margin-left: -132vw;
+    margin-left: -140em;
 }
 
 #slide5:checked ~ .staff p:nth-of-type(1) {
     transition: 0.5s;
-    margin-top: -39em;
+    margin-top: -38em;
+}
+
+@media(max-width:320px) {
+    .imgbox {
+        width: 15em;
+        height: 15em;
+    }
+
+    img {
+        width: 15em;
+        height: 15em;
+    }
+
+    .staff {
+        width: 15em;
+        height: 5.1em;
+        flex-direction: column;
+        margin: 0;
+    }
+    
+    .text {
+        overflow: hidden;
+    }
+
+    p {
+        height: 1em;
+        margin-top: 0;
+    }
+
+    #slide1:checked ~ .staff p:nth-of-type(1) {
+        margin-top: 0em;
+    }
+
+    #slide2:checked ~ .staff p:nth-of-type(1) {
+        margin-top: -2em;
+    }
+
+    #slide3:checked ~ .staff p:nth-of-type(1) {
+        margin-top: -4em;
+    }
+
+    #slide4:checked ~ .staff p:nth-of-type(1) {
+        margin-top: -6em;
+    }
+
+    #slide5:checked ~ .staff p:nth-of-type(1) {
+        margin-top: -8em;
+    }
+
+    #slide2:checked ~ .imgbox .img {
+        margin-left: -15em;
+    }
+
+    #slide3:checked ~ .imgbox .img {
+        margin-left: -30em;
+    }
+
+    #slide4:checked ~ .imgbox .img {
+        margin-left: -45em;
+    }
+
+    #slide5:checked ~ .imgbox .img {
+        margin-left: -60em;
+    }
 }
 
 
