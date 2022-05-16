@@ -121,7 +121,7 @@ input {
 
 #slide2:checked ~ .staff p:nth-of-type(1) {
     transition: 0.5s;
-    margin-top: 32em;
+    margin-top: 34em;
 }
 
 #slide3:checked ~ .imgbox .img {
@@ -131,7 +131,7 @@ input {
 
 #slide3:checked ~ .staff p:nth-of-type(1) {
     transition: 0.5s;
-    margin-top: 9em;
+    margin-top: 10em;
 }
 
 #slide4:checked ~ .imgbox .img {
